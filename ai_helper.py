@@ -11,6 +11,9 @@ def generate_plan(date_range, theme, location, budget):
                 Provide a day-by-day itinerary with activities, dining options, and accommodation suggestions.
                 Provide the details of accommodation, travel (flight/train/bus) in table. Explain the day by day itinerary later in points.
 
+                Start your reply with a tabular summary of all travel and hotel bookings. If multiple bookings are needed, list them all in the table.
+                Preferably start with travel booking and then show hotel booking. In a table format.
+
                 Format the response in markdown for easy readability on frontend.
             """
     )
