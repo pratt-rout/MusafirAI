@@ -1,13 +1,14 @@
 from google import genai
-from dotenv import load_dotenv
 import os
+import streamlit as st
 
-load_dotenv()
+# load_dotenv()
+os.environ["GOOGLE_API_KEY"] = st.secrets.google.GOOGLE_API_KEY
 
 def generate_plan(date_range, theme, location, budget, special_request):
     client = genai.Client(vertexai=True, api_key=os.getenv("GOOGLE_API_KEY"))
 
-    model = "gemini-2.5-flash"
+    model = "gemini-2.5-pro"
     response = client.models.generate_content(
         model=model,
         contents=f"""

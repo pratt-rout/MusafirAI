@@ -3,13 +3,9 @@ import datetime
 from dateutil.relativedelta import relativedelta
 
 from scripts.ai_helper import generate_plan
+from scripts.toml_update import fetch_secret
 
-# if not st.user.is_logged_in:
-#     if st.button("Log in with Google"):
-#         st.login()
-#         st.markdown("If you are not redirected automatically, please refresh the page.")
-
-# st.markdown(f"Welcome! {st.user.name}")
+fetch_secret()
 
 def login_screen():
     st.header("This app is private.")
@@ -71,11 +67,10 @@ if date_range and theme and location and budget:
             special_request=special_request
         )
 
+        # logger.info(f"RESULT: {output}")
         # st.markdown(output, unsafe_allow_html=True)
         st.markdown(output)
 
-# if st.button("Log out"):
-#     st.logout()
 
 
 
