@@ -15,7 +15,7 @@ def generate_plan(date_range, theme, start_location, end_location, budget, speci
             Generate a travel plan for a trip from {start_location} to {end_location} from {date_range[0]} to {date_range[1]}. The theme of the trip is {theme} and the maximum budget is INR{budget}. 
             Also try to accommodate the user's special requests: {special_request}.
             
-            If you feel like the max budget and time is too low for the trip, you can increase them as per requirement. Mention them in bold at the start.
+            If you feel like the max budget and time is too low for the trip,, you can increase them as per requirement. Mention them in bold at the start.
 
             Provide a day-by-day itinerary with activities, dining options, and accommodation suggestions.
             Provide the details of accommodation, travel (flight/train/bus) in table. Explain the day by day itinerary later in points.
