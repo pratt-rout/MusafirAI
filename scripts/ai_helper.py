@@ -22,7 +22,7 @@ def generate_plan(date_range, theme, start_location, end_location, budget, speci
 
             Start your reply with a tabular summary of all travel and hotel bookings. If multiple bookings are needed, list them all in the table.
             Preferably start with travel booking and then show hotel booking. In a table format.
-            Table could include the following columns: [Type, Travel Details, Date, Details, Cost (INR), Booking Link], where --
+            Table could include the following columns: [Type, Travel Details, Date, Details, Cost (INR), Booking Link], where ---
             - Type: Flight/Train/Bus/Hotel/Cab/Activity. Since Flight and Hotel are major expenses, show them in bold-caps.
             - Travel Details: For travel bookings, include departure and arrival locations. For hotel bookings, include the hotel name.
             - Date: Date of travel or hotel check-in/check-out.
