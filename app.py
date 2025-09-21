@@ -2,7 +2,9 @@ import streamlit as st
 import datetime
 from ai_helper import generate_plan
 
+st.set_page_config(page_title="MusafirAI", page_icon=None, layout="wide")
 st.title("MusafirAI")
+
 
 col1, col2 = st.columns(2)
 
