@@ -1,5 +1,6 @@
 import streamlit as st
 import datetime
+from ai_helper import generate_plan
 
 st.title("MusafirAI")
 
@@ -8,36 +9,37 @@ col1, col2 = st.columns(2)
 with col1:
     today = datetime.datetime.now()
     next_year = today.year + 1
-    jan_1 = datetime.date(next_year, 1, 1)
     dec_31 = datetime.date(next_year, 12, 31)
 
-    d = st.date_input(
+    date_range = st.date_input(
         "Your Duration",
-        (jan_1, datetime.date(next_year, 1, 7)),
-        jan_1,
+        (today, datetime.date(next_year, 1, 7)),
+        today,
         dec_31,
-        format="MM.DD.YYYY",
+        format="DD.MM.YYYY",
     )
-    print(d)
 
 with col1:
-    option = st.selectbox(
+    theme = st.selectbox(
         label="Your Theme",
         options=["Romantic", "Adventure", "Cultural", "Nature", "Relaxation"],
         index=1,
     )
 with col2:
-    text_entry = st.text_input(
+    location = st.text_input(
         "Your location",
-        placeholder="Rome"
+        "Rome"
     )
 
 with col2:
-    color = st.select_slider(
+    budget = st.select_slider(
     "Your max budget",
-    options=list(range(100,100000,100))
+    options=list(range(1000,500100,100))
 )
 
 
-st.button("GENERATE PLAN", type="primary", width="stretch")
+if st.button("GENERATE PLAN", type="primary", width="stretch"):
+    output = generate_plan(date_range, theme, location, budget)
+    st.markdown(output)
+
 
