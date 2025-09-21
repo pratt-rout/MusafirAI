@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 from ai_helper import generate_plan
 
-st.set_page_config(page_title="MusafirAI", page_icon=None, layout="wide")
+st.set_page_config(page_title="MusafirAI", page_icon="Musafir.png", layout="wide")
 st.title("MusafirAI")
 
 
