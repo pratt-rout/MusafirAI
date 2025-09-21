@@ -17,6 +17,9 @@ def generate_plan(date_range, theme, location, budget):
                 - Type: Flight/Train/Bus/Hotel/Cab/Activity
                 - Travel Details: For travel bookings, include departure and arrival locations. For hotel bookings, include the hotel name.
                 - Date: Date of travel or hotel check-in/check-out.
+                Keep the steps in this booking table sequential as per your itinerary. 
+                Example - Starting flight will come first, then hotel, then next travel, then next hotel and so on. Ideally it should end with final return travel booking. 
+                Above example is just for understanding, you dont need to follow it strictly in your response. 
 
                 In the itinerary, Whenever there is activities involving travel, provide a link named BOOK HERE for booking the travel. Add a dummy link as directed below --
                     - If its a flight booking use --    [BOOK HERE](https://www.easemytrip.com/flights.html)
