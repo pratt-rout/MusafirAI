@@ -3,9 +3,9 @@ import datetime
 from dateutil.relativedelta import relativedelta
 
 from scripts.ai_helper import generate_plan
-from scripts.toml_update import fetch_secret
+from scripts.toml_update import create_toml_file
 
-fetch_secret()
+create_toml_file()
 
 def login_screen():
     st.header("This app is private.")
