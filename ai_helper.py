@@ -13,6 +13,13 @@ def generate_plan(date_range, theme, location, budget):
 
                 Start your reply with a tabular summary of all travel and hotel bookings. If multiple bookings are needed, list them all in the table.
                 Preferably start with travel booking and then show hotel booking. In a table format.
+                
+                In the itinerary, Whenever there is activities involving travel, provide a link named BOOK HERE for booking the travel. Add a dummy link as directed below -- 
+                    - If its a flight booking use --    [BOOK HERE](https://www.easemytrip.com/flights.html) 
+                    - If its a train booking use --     [BOOK HERE](https://www.easemytrip.com/railways/)
+                    - If its a bus booking use --       [BOOK HERE](https://www.easemytrip.com/bus/)
+                    - If its a cab booking use --       [BOOK HERE](https://www.easemytrip.com/cabs/)
+                    - If its a activity booking use --  [BOOK HERE](https://www.easemytrip.com/activities/)
 
                 Format the response in markdown for easy readability on frontend.
             """
