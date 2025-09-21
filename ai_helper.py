@@ -32,8 +32,8 @@ def generate_plan(date_range, theme, location, budget, special_request):
             Show these expenses at top of the table , since it should be done before the trip starts. 
             Show final return flight towards the end of the table.
             Show Local Transport on the dates whenever its required. Do not club them towards the end.
-            Whenever you are mentioning any travel spot, show google link for that spot.
-            Eg - Colosseum, Rome - https://goo.gl/maps/1DqkX7Z1Jz5t7o5K8
+            Whenever you are mentioning any travel spot, show google link for that spot. Do not do it in the table, do it in the itinerary section.
+            Eg - [Location_Name](https://www.google.com/maps/search/?api=1&query=Location_Name)
 
             For visa application, if you have some valid links, you can provide them as well. Eg - [Visa Application](https://visa.vfsglobal.com/ind/en/ita/)
 

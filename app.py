@@ -32,7 +32,7 @@ with col1:
 with col2:
     location = st.text_input(
         "Your location (s)",
-        "Rome"
+        placeholder = "E.g - Rome.   If multiple locations, separate by commas. Eg - Rome, Florence",
     )
 
 with col2:
