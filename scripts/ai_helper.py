@@ -5,14 +5,14 @@ import streamlit as st
 # load_dotenv()
 os.environ["GOOGLE_API_KEY"] = st.secrets.google.GOOGLE_API_KEY
 
-def generate_plan(date_range, theme, location, budget, special_request):
+def generate_plan(date_range, theme, start_location, end_location, budget, special_request):
     client = genai.Client(vertexai=True, api_key=os.getenv("GOOGLE_API_KEY"))
 
     model = "gemini-2.5-pro"
     response = client.models.generate_content(
         model=model,
         contents=f"""
-            Generate a travel plan for a trip to {location} from {date_range[0]} to {date_range[1]}. The theme of the trip is {theme} and the maximum budget is INR{budget}. 
+            Generate a travel plan for a trip from {start_location} to {end_location} from {date_range[0]} to {date_range[1]}. The theme of the trip is {theme} and the maximum budget is INR{budget}. 
             Also try to accommodate the user's special requests: {special_request}.
             
             If you feel like the max budget and time is too low for the trip, you can increase them as per requirement. Mention them in bold at the start.
