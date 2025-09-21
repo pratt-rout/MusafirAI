@@ -1,8 +1,11 @@
 {
     "cSpell.words": [
         "dateutil",
+        "dotenv",
+        "genai",
         "Musafir",
         "relativedelta",
-        "selectbox"
+        "selectbox",
+        "vertexai"
     ]
 }
