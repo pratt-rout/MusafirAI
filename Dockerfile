@@ -9,7 +9,7 @@
 
 
 # Stage 1: Builder with uv
-FROM ghcr.io/astral-sh/uv:0.1.11-python3.13-slim AS builder
+FROM ghcr.io/astral-sh/uv:0.1.11-python3.11-slim AS builder
 WORKDIR /app
 COPY pyproject.toml uv.lock ./
 RUN uv venv && .venv/bin/uv sync --locked
